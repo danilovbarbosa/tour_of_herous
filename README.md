@@ -1,24 +1,31 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Database
 
-Things you may want to cover:
+- Execute as migrações
 
-* Ruby version
+```sh
+rails db:migrate
+```
 
-* System dependencies
+## Run
 
-* Configuration
+- Para executar este projeto, configure o arquivo credentials.yml.enc, para isto execute:
 
-* Database creation
+```sh
+EDITOR="code --wait" bin/rails credentials:edit 
+```
 
-* Database initialization
+- Depois adicione:
 
-* How to run the test suite
+```yaml
+authenticate:
+  name: admin
+  password: admin
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+- Por fim, execute:
 
-* Deployment instructions
-
-* ...
+```sh
+rails s
+```
